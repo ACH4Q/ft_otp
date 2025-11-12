@@ -1,0 +1,55 @@
+[
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "fernet",
+        "importPath": "cryptography",
+        "description": "cryptography",
+        "isExtraImport": true,
+        "detail": "cryptography",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ft_otp",
+        "description": "ft_otp",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description=\"ft_otp\")\n    parser.add_argument(\"-g\",\n                        \"--generate\",\n                        metavar=\"KEY_FILE\",\n                        help=\"ft\")\n    parser.add_argument(\"-k\",\n                        \"--key\",\n                        metavar=\"KEY_FILE\",\n                        help=\"ft\")",
+        "detail": "ft_otp",
+        "documentation": {}
+    },
+    {
+        "label": "core",
+        "kind": 2,
+        "importPath": "logic",
+        "description": "logic",
+        "peekOfCode": "def core():\n    key = fernet.generatekey()",
+        "detail": "logic",
+        "documentation": {}
+    }
+]
