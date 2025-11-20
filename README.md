@@ -1,6 +1,3 @@
-
----
-
 # ft_otp: Time-based One-Time Password Tool
 
 `ft_otp` is a command-line tool written in Python that implements a Time-based One-Time Password (TOTP) system, compliant with RFC 6238. It allows for the secure storage of a secret key and the generation of 6-digit one-time passwords that are compatible with standard authenticator applications.
@@ -50,7 +47,8 @@ This command creates a file named `my_secret.hex` containing a 64-character hex 
 Use the `-g` flag to encrypt the key from your `.hex` file and store it securely. You will be prompted to create a password to protect this file.
 
 ```bash
-python3 ft_otp.py -g my_secret.hex```
+python3 ft_otp.py -g my_secret.hex
+```
 
 **Example Interaction:**
 ```
@@ -74,7 +72,8 @@ python3 ft_otp.py -k ft_otp.key
 $ python3 ft_otp.py -k ft_otp.key
 Enter password to decrypt the key: 
 836492
-```The program will output a 6-digit code that changes every 30 seconds.
+```
+The program will output a 6-digit code that changes every 30 seconds.
 
 ## How It Works
 
@@ -94,4 +93,4 @@ The program follows the standard TOTP algorithm:
 ├── ft_otp.py             # Main executable: handles arguments and user I/O
 ├── otp_logic.py          # Core module: contains encryption and TOTP algorithms
 └── requirements.txt      # Project dependencies
-```
+``` 
