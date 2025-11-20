@@ -1,7 +1,7 @@
 import argparse
 import getpass
 from cryptography.fernet import InvalidToken
-import otp_logic
+import logic
 
 # Define the constant for the output file name
 ENCRYPTED_KEY_FILENAME = "ft_otp.key"
@@ -23,7 +23,7 @@ def handle_generate_key(key_file_path):
             print("Error: Passwords do not match.")
             return
 
-        encrypted_key = otp_logic.encrypt_data(hex_key.encode(), password)
+        encrypted_key = logic.encrypt_data(hex_key.encode(), password)
 
         with open(ENCRYPTED_KEY_FILENAME, 'wb') as f:
             f.write(encrypted_key)
@@ -43,10 +43,10 @@ def handle_get_password(encrypted_key_path):
 
         password = getpass.getpass("Enter password to decrypt the key: ")
         
-        decrypted_key = otp_logic.decrypt_data(encrypted_data, password)
+        decrypted_key = logic.decrypt_data(encrypted_data, password)
         hex_key = decrypted_key.decode()
         
-        one_time_password = otp_logic.generate_totp(hex_key)
+        one_time_password = logic.generate_totp(hex_key)
         print(one_time_password)
 
     except FileNotFoundError:
