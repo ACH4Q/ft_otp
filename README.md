@@ -21,7 +21,7 @@
 
 1.  **Clone the repository or download the project files:**
     ```bash
-    git clone <your-repo-link>
+    git clone https://github.com/ACH4Q/ft_otp
     cd ft_otp
     ```
 
